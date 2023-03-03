@@ -2,7 +2,6 @@ def add_time(start, duration, day_of_week=None):
 
   days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
   
-  
   start_time_12format = start.split()
   start_time = start_time_12format[0]
   am_or_pm = start_time_12format[1]
@@ -48,9 +47,6 @@ def add_time(start, duration, day_of_week=None):
     days_later = 0
     day_count = ""
 
-    
-      
-
   if(day_of_week is not None):
     start_day = day_of_week.lower()
     day_index = days.index(start_day)
@@ -63,21 +59,11 @@ def add_time(start, duration, day_of_week=None):
       final_day = days[new_day_index].capitalize()
   else:
     final_day = ""
-
-   
-  
-
-  
-
-  
-  
-
+    
   start_time_min = "{:02d}".format(start_time_min)
   duration_min = "{:02d}".format(duration_min)
   new_time_min = "{:02d}".format(new_time_min)
   
-  
-
   if new_time_hour <= 11:
     am_or_pm_final = "AM"
   elif new_time_hour >= 13 and new_time_hour <= 23:
